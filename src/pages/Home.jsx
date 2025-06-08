@@ -1,31 +1,12 @@
 import React from 'react';
+import YoutubeBlock from '../components/YoutubeBlock'; // Adjust the import path as necessary
 
 function Home() {
     return (
         <div className="home">
             <h1>Welcome to the Home Page</h1>
             <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
-            <p>This is a simple React application.</p>
-            <p>Use the navigation bar to explore different pages.</p>
+            <YoutubeBlock />
         </div>
     );
 }
