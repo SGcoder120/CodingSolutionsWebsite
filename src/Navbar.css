@@ -43,7 +43,7 @@
     padding: 0.5rem 1rem;
 }
 
-.navbar-links button:hover {
+.navbar-links button:hover{
     background-color: #444;
     border-radius: 4px;
 }
