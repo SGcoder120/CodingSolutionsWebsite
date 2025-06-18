@@ -1,0 +1,14 @@
+.home {
+    padding: 10px;
+    font-family: "Outfit", sans-serif;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+.home-heading-1 {
+    text-align: center;
+}
+
+.youtube-block {
+    background-color: #fff2d4;
+}
