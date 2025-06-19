@@ -2,10 +2,13 @@
     position: relative;
     top: 0%;
     left: -1%;
-    width: 102%;
-    height: 92vh;
+    width: 101.55%;
+    height: 100%;
     overflow: hidden;
     text-align: center;
+    font-family: "Outfit", sans-serif;
+    background-color: black;
+    color: white;
 }
 
 .youtube-list-item {
@@ -15,6 +18,12 @@
 }
 
 .youtube-block-container {
-    padding-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
+.youtube-button {
+    color: #b7adff;
+    border: none;
+    cursor: pointer;
+}

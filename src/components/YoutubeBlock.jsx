@@ -4,7 +4,7 @@ import './YoutubeBlock.css'; // Assuming you have a CSS file for styling
 const videos = [
   { id: 'LGdPMf-SgBA', title: 'React Portfolio' },
   { id: 'yxbhtFruNOM', title: 'Latex in React' },
-  { id: '9bZkp7q19f0', title: 'Video 3' },
+  { id: 'NBrQp6-721c', title: 'Deploying a Website' },
 ];
 
 function YoutubeBlock() {
@@ -16,9 +16,8 @@ function YoutubeBlock() {
   }
 
   return (
-
     <div className="youtube-superblock" >
-      <p className="youtube-heading">Here are some nice resources I used</p>
+      <p className="youtube-heading">Here are some nice resources I used:</p>
 
       <div className="youtube-buttons">
         <ul className="youtube-list">
@@ -37,7 +36,7 @@ function YoutubeBlock() {
         </ul>
       </div>
       
-      <div className='youtube-block-container' style={{ paddingTop: '40px', textAlign: 'center' }}>
+      <div className='youtube-block-container'>
         <iframe 
             className="youtube-block"
             title="YouTube Video Player"
@@ -48,9 +47,7 @@ function YoutubeBlock() {
             allowFullScreen
         ></iframe>
       </div>
-
     </div>
-    
   );
 }
 

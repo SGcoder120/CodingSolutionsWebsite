@@ -1,4 +1,7 @@
 import React from 'react';
+import 'katex/dist/katex.min.css';
+import { BlockMath, InlineMath } from 'react-katex';
+import './Home.css'; // Assuming you have a CSS file for styling
 
 function Solutions() {
   return (

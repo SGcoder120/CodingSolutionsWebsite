@@ -13,11 +13,12 @@ function Home() {
                 <h1 className="home-heading-1">Welcome to my Home Page</h1>
                 <p>Hello! I am Shivesh Gupta and this is my personal website. In this website, I post my coding solutions from Codeforces contests over here on this website. I am still aspiring to work on competitive coding in the foreseeable future.</p>
                 <p>Feel free to explore the content and learn more about my coding journey!</p>
-                <p>
+                <p>As of now, this website is a work in progress. Come back soon!</p>
+                {/* <p>
                     Here is a sample equation:
                     <BlockMath math="\int_0^\infty e^{-x} \, dx = 1" />
                     Here is an inline equation: <InlineMath math="\sqrt{a^2 + b^2} = c" />
-                </p>
+                </p> */}
                 
                 
             </div>

@@ -1,8 +1,14 @@
 .home {
-    padding: 10px;
+    overflow-x: hidden;
+    position: relative;
+    left: -1%;
+    width: 101.55%;
+    padding: 20px;
     font-family: "Outfit", sans-serif;
-    background-color: #f0f0f0;
+    background-color: #1d1d1d;
+    color: #ffffff;
     box-sizing: border-box;
+    
 }
 
 .home-heading-1 {
@@ -10,5 +16,5 @@
 }
 
 .youtube-block {
-    background-color: #fff2d4;
+    background-color: #745f00;
 }
