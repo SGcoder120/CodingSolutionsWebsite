@@ -3,13 +3,15 @@ import Navbar from './Navbar';
 import Home from './pages/Home';
 import Solutions from './pages/Solutions';
 import About from './pages/About';
+import './App.css'; // Assuming you have a CSS file for global styles
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
     return (
         <Router>
             <Navbar />
-            <div style={{ paddingTop: '40px' }}>
+            <div className="app" style={{ paddingTop: '40px' }}>
+                {/* This padding is to ensure the content is not hidden behind the navbar */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/solutions" element={<Solutions />} />
