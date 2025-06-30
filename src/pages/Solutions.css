@@ -4,3 +4,8 @@
     background-color: #202020;
     color: white;
 }
+
+.solution-block {
+    width: 100%;
+    transform: translateX(-0.75%);
+}

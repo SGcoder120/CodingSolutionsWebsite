@@ -8,7 +8,7 @@ function SolutionBlock({ problemNumber, name, link, solutionText }) {
   return (
     <div className="solution-block">
       <h3 className="solution-heading">{problemNumber} - {name}</h3>
-      <a href={link} className="solution-link" target="_blank" rel="noreferrer">
+      <a href={link} className="solution-link" target="blank" rel="noreferrer">
         {link}
       </a>
       <div className="solution-content">
