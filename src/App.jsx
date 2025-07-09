@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Home from './pages/Home';
 import Solutions from './pages/Solutions';
 import About from './pages/About';
+import Interactives from './pages/Interactives';
 import './App.css'; // Assuming you have a CSS file for global styles
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/solutions" element={<Solutions />} />
+                    <Route path="/interactives" element={<Interactives />} /> 
                     <Route path="/about" element={<About />} />
                 </Routes>
             </div>

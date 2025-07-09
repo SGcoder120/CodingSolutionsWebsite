@@ -4,3 +4,12 @@
     background-color: #202020;
     color: white;
 }
+
+.href-link {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.href-link:hover {
+    text-decoration: underline;
+}

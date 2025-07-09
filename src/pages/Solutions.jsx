@@ -150,7 +150,7 @@ function Solutions() {
       </p>`}
       />
     <h2>Codeforces Round 1029 (Div. 3)</h2>
-
+    <p>Work in progress trust me bro</p>
     </div>
   );
 }
