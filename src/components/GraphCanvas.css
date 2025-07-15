@@ -1,0 +1,15 @@
+.default-canvas {
+  width: 50%;
+  height: 50%;
+  display: block;
+  border: '1px solid white';
+}
+.xy-vals {
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+.graph-block {
+  text-align: center;
+  padding: 20px;
+}
