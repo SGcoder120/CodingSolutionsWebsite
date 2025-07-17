@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './GraphCanvas.css'; // Assuming you have a CSS file for styling
 
 function GraphCanvas() {
@@ -14,7 +14,7 @@ function GraphCanvas() {
     }
 
     // Function to draw the graph
-    const draw = (ctx, width, height, scale) => {
+    const draw = useCallback((ctx, width, height, scale) => {
         const originX = width / 2;
         const originY = height / 2;
 
@@ -106,7 +106,7 @@ function GraphCanvas() {
         ctx.beginPath();
         ctx.arc(pointX2, pointY2, 6, 0, Math.PI * 2); // The point on the second graph
         ctx.fill();
-    };
+    }, [xVal]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -116,7 +116,7 @@ function GraphCanvas() {
         const scale = 20; // Scale for the graph
 
         draw(ctx, width, height, scale);
-    }, [xVal]); 
+    }, [xVal, draw]); 
 
     return (
         <div className="graph-block">
