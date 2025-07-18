@@ -3,6 +3,7 @@ import './Interactives.css'; // Assuming you have a CSS file for styling
 import 'katex/dist/katex.min.css';
 import GraphCanvas from '../components/GraphCanvas'; // Assuming you have a GraphCanvas 
 import LogicGates from '../components/LogicGates'; // Assuming you have a LogicGates component
+import AlgebraTiles from '../components/AlgebraTiles'; // Assuming you have an AlgebraTiles component
 
 function Interactives() {
   return (
@@ -12,6 +13,10 @@ function Interactives() {
       <p>Here is a cool graph: </p>
       <div className="graph-container">
         <GraphCanvas />
+      </div>
+      <p>Here is a section about algebra tiles:</p>
+      <div className="algebra-tiles-container">
+        <AlgebraTiles />
       </div>
       <p>Here is a section about logic gates:</p>
       <div className="logic-gates-container">
