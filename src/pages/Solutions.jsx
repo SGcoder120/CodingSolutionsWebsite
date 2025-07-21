@@ -1,6 +1,6 @@
 import React from 'react';
 import 'katex/dist/katex.min.css';
-import { BlockMath, InlineMath } from 'react-katex';
+// import { BlockMath, InlineMath } from 'react-katex';
 import './Solutions.css'; // Assuming you have a CSS file for styling
 import SolutionBlock from '../components/SolutionBlock';
 
@@ -150,7 +150,89 @@ function Solutions() {
       </p>`}
       />
     <h2>Codeforces Round 1029 (Div. 3)</h2>
-    <p>Work in progress trust me bro</p>
+    <SolutionBlock
+        problemNumber="2117E"
+        name="Lost Soul"
+        link="https://codeforces.com/contest/2117/problem/E"
+        solutionText={`
+      <p>
+        It's clear to see that if a match exists at position <InlineMath math="i" />, then we can repeatedly set <InlineMath math="a_j := b_{j+1}" /> and <InlineMath math="b_j := a_{j+1}" /> for all <InlineMath math="j" />, where <InlineMath math="j" /> starts as <InlineMath math="i-1" /> and goes backwards until the start of the array.
+        This allows us to have at least <InlineMath math="i" /> matches (including the match at position <InlineMath math="i" />).
+      </p>
+
+      <p>
+        Therefore, the optimal approach is to maximize the index <InlineMath math="i" /> where <InlineMath math="a_i = b_i" />. Suppose we can't remove any element.
+        Then, for some <InlineMath math="a_i" />, we can set it to any <InlineMath math="b_j" /> such that <InlineMath math="j mod 2 ne i mod 2" /> and <InlineMath math="j > i" />, or set it to any <InlineMath math="a_j" /> such that <InlineMath math="j mod 2 = i mod 2" /> and <InlineMath math="j > i" />.
+      </p>
+
+      <p>
+        However, if we wanted to set <InlineMath math="a_i" /> to some <InlineMath math="b_j" /> where <InlineMath math="j mod 2 = i mod 2" />, then we can just remove index <InlineMath math="i+1" /> from the array.
+        By similar reasoning, we can set <InlineMath math="a_i" /> to any <InlineMath math="a_j" /> where <InlineMath math="j mod 2 ne i mod 2" /> and <InlineMath math="j > i+1" />.
+      </p>
+
+      <p>
+        Notice that we removed index <InlineMath math="i+1" />, so we can't set <InlineMath math="a_i := a_{i+1}" />. Now, we know that we can set any <InlineMath math="a_i" /> to any <InlineMath math="a_j" /> or <InlineMath math="b_j" /> such that <InlineMath math="j > i+1" />.
+        This can be generalized for <InlineMath math="b_i" /> as well.
+      </p>
+
+      <p>
+        So the solution is that, for each position <InlineMath math="i" />, we want to check if any <InlineMath math="a_j" /> or <InlineMath math="b_j" />, such that <InlineMath math="j > i+1" />, matches <InlineMath math="a_i" /> or <InlineMath math="b_i" />, allowing us to get a match at position <InlineMath math="i" />.
+        We also need to check if position <InlineMath math="i" /> already contains a match, or if <InlineMath math="a_i = a_{i+1}" /> or <InlineMath math="b_i = b_{i+1}" />.
+      </p>`}
+      />
+      <SolutionBlock
+        problemNumber="2117F"
+        name="Wildflower"
+        link="https://codeforces.com/contest/2117/problem/F"
+        solutionText={`
+          <div>
+      <p>
+        We only need to consider two cases, the case of <InlineMath math="1" /> leaf and the case of <InlineMath math="2" /> leaves.
+      </p>
+
+      <p>
+        <strong>1 leaf case:</strong> We can see that <InlineMath math="{1, 2}" /> are positive values, so <InlineMath math="s" /> is strictly increasing as you move towards the root.
+        Therefore, any array <InlineMath math="a" /> will be valid. The answer for this case would be <InlineMath math="2n" />.
+      </p>
+
+      <p>
+        <strong>2 leaves case:</strong> Let <InlineMath math="v" /> be the lowest common ancestor between leaf <InlineMath math="x" /> and leaf <InlineMath math="y" />.
+        From <InlineMath math="v" /> going up towards the root, we can see that it follows the same idea as the 1-leaf case, which means that any vertex in the path between the root and <InlineMath math="v" /> can be assigned to either <InlineMath math="1" /> or <InlineMath math="2" />.
+      </p>
+
+      <p>
+        Without loss of generality, suppose leaf <InlineMath math="x" /> has smaller depth than leaf <InlineMath math="y" />.
+        Say we assigned <InlineMath math="a_x = 1" /> and <InlineMath math="a_y = 2" />; it is easy to see that we are forced to assign vertices to <InlineMath math="2" /> as we're going up, until we eventually finish assigning a branch.
+        So the number of vertices that are free to be assigned to either <InlineMath math="1" /> or <InlineMath math="2" /> in <InlineMath math="y" />'s branch is simply <InlineMath math="depth_y - depth_x" />.
+      </p>
+
+      <p>
+        If we assign <InlineMath math="a_x = 2" /> and <InlineMath math="a_y = 1" /> instead, then <InlineMath math="y" /> would have one more vertex forced to be assigned to <InlineMath math="2" />, meaning there are only <InlineMath math="depth_y - depth_x - 1" /> free vertices in <InlineMath math="y" />'s branch.
+      </p>
+
+      <p>
+        Finally, the last case to be checked is if <InlineMath math="depth_x = depth_y" />.
+        In this case, whether we assign <InlineMath math="x" /> to <InlineMath math="1" /> and <InlineMath math="y" /> to <InlineMath math="2" />, or we assign <InlineMath math="x" /> to <InlineMath math="2" /> and <InlineMath math="y" /> to <InlineMath math="1" />,
+        all vertices in both branches are forced, so there are no free vertices in either branch.
+      </p>
+
+      <p>
+        Let the number of leaves be <InlineMath math="cnt" />. Then we have that:
+      </p>
+
+      <p> I'm going to fix the following: </p>
+      <BlockMath math={\`
+      \\text{Answer} =
+      \\begin{cases}
+        0 & \\text{if } cnt > 2 \\\\
+        2n & \\text{if } cnt = 1 \\\\
+        (2^{depth_y - depth_x} + 2^{depth_y - depth_x - 1}) \\cdot 2^{depth_v} & \\text{if } cnt = 2 \\text{ and } depth_x < depth_y \\\\
+        2^{depth_v} & \\text{if } cnt = 2 \\text{ and } depth_x = depth_y
+      \\end{cases}
+      \`} />
+    </div>
+        `}
+      />
     </div>
   );
 }

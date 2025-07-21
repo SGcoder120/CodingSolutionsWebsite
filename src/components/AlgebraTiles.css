@@ -1,0 +1,74 @@
+/* Layout */
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f3f4f6;
+  font-family: sans-serif;
+}
+
+.palette {
+  width: 160px;
+  background-color: #ffffff;
+  border-right: 1px solid #d1d5db;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.palette-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.palette-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+
+/* Tile colors */
+.x2 {
+  background-color: #60a5fa;
+}
+
+.x {
+  background-color: #34d399;
+}
+
+.one {
+  background-color: #fde68a;
+}
+
+.workspace {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background-color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiles */
+.tile {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}

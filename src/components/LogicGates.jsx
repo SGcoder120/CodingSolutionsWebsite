@@ -13,6 +13,8 @@ function LogicGates() {
                 <li><strong>NAND Gate:</strong> Outputs false only if both inputs are true (NOT AND).</li>
                 <li><strong>XOR Gate:</strong> Outputs true if inputs are different.</li>
             </ul>
+
+            
         </div>
     );
 }
