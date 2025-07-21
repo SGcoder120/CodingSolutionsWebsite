@@ -16,6 +16,18 @@ function SolutionBlock({ problemNumber, name, link, solutionText }) {
           jsx={solutionText}
           components={{ BlockMath, InlineMath }}
         />
+        
+        {name === "Wildflower" && (
+          <BlockMath math={`
+          \\text{Answer} =
+          \\begin{cases}
+            0 & \\text{if } cnt > 2 \\\\
+            2n & \\text{if } cnt = 1 \\\\
+            (2^{depth_y - depth_x} + 2^{depth_y - depth_x - 1}) \\cdot 2^{depth_v} & \\text{if } cnt = 2 \\text{ and } depth_x < depth_y \\\\
+            2^{depth_v} & \\text{if } cnt = 2 \\text{ and } depth_x = depth_y
+          \\end{cases}
+          `} />
+        )}
       </div>
     </div>
   );

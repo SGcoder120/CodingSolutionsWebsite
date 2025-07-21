@@ -1,6 +1,6 @@
 import React from 'react';
 import 'katex/dist/katex.min.css';
-// import { BlockMath, InlineMath } from 'react-katex';
+import { BlockMath, InlineMath } from 'react-katex';
 import './Solutions.css'; // Assuming you have a CSS file for styling
 import SolutionBlock from '../components/SolutionBlock';
 
@@ -185,7 +185,6 @@ function Solutions() {
         name="Wildflower"
         link="https://codeforces.com/contest/2117/problem/F"
         solutionText={`
-          <div>
       <p>
         We only need to consider two cases, the case of <InlineMath math="1" /> leaf and the case of <InlineMath math="2" /> leaves.
       </p>
@@ -219,20 +218,9 @@ function Solutions() {
       <p>
         Let the number of leaves be <InlineMath math="cnt" />. Then we have that:
       </p>
-
-      <p> I'm going to fix the following: </p>
-      <BlockMath math={\`
-      \\text{Answer} =
-      \\begin{cases}
-        0 & \\text{if } cnt > 2 \\\\
-        2n & \\text{if } cnt = 1 \\\\
-        (2^{depth_y - depth_x} + 2^{depth_y - depth_x - 1}) \\cdot 2^{depth_v} & \\text{if } cnt = 2 \\text{ and } depth_x < depth_y \\\\
-        2^{depth_v} & \\text{if } cnt = 2 \\text{ and } depth_x = depth_y
-      \\end{cases}
-      \`} />
-    </div>
         `}
       />
+      
     </div>
   );
 }

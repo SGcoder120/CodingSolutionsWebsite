@@ -1,4 +1,4 @@
-/* Layout */
+/* Layout
 .app {
   display: flex;
   height: 100vh;
@@ -31,7 +31,6 @@
   color: black;
 }
 
-/* Tile colors */
 .x2 {
   background-color: #60a5fa;
 }
@@ -60,7 +59,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Tiles */
 .tile {
   position: absolute;
   display: flex;
@@ -71,4 +69,4 @@
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   user-select: none;
-}
+} */
